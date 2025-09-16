@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: "jdbc:oracle:thin:@192.168.50.6:1521:opmpfdb"
-    username: marketing2014
-    password: marketingsys2014
+    url: "jdbc:oracle:thin:@[host]:1521:[sid]"
+    username: [user]
+    password: [password]
     hikari:
      maximum-pool-size: 10
      minimum-idle: 2 
@@ -36,4 +36,4 @@ logging:
 
 server:
   servlet:
-    context-path: /ediscount-monitoring
+    context-path: /[contextPath]
