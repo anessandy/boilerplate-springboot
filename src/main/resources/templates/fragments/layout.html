@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <meta charset="UTF-8">
+        <title th:text="${title}">Dashboard</title>
+        <link rel="stylesheet" th:href="@{/adminlte/plugins/fontawesome-free/css/all.min.css}">
+        <link rel="stylesheet" th:href="@{/adminlte/plugins/select2/css/select2.min.css}">
+        <link rel="stylesheet" th:href="@{/adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
+        <link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper" th:fragment="layout (title, pageTitle)">
+
+            <div th:replace="fragments/header :: header"></div>
+            <div th:replace="fragments/sidebar :: sidebar"></div>
+
+            <div class="content-wrapper pt-3">
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <h1 th:text="${pageTitle}">Page Title</h1>
+                    </div>
+                </section>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div th:replace="::content">Default content if not replaced</div>
+                    </div>
+                </section>
+            </div>
+
+             <div th:replace="fragments/footer :: footer"></div>
+
+        </div>
+
+        <script th:src="@{/adminlte/plugins/jquery/jquery.min.js}"></script>
+        <script th:src="@{/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/adminlte/plugins/select2/js/select2.full.min.js}"></script>
+        
+        <!-- Plugin Select2 -->
+    <script th:src="@{/adminlte/plugins/select2/js/select2.full.min.js}"></script>
+    </body>
+</html>

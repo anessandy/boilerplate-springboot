@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: "jdbc:oracle:thin:@192.168.50.6:1521:opmpfdb"
+    username: marketing2014
+    password: marketingsys2014
+    hikari:
+     maximum-pool-size: 10
+     minimum-idle: 2 
+     idle-timeout: 30000
+     max-lifetime: 1800000
+     connection-timeout: 30000
+     pool-name: MyHikariPool
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.OracleDialect
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    sufix: .html
+    mode: HTML
+  
+  web:
+    resources:
+      add-mappings: true
+
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE
+    root: INFO
+    org.springframework.web: WARN
+
+server:
+  servlet:
+    context-path: /ediscount-monitoring

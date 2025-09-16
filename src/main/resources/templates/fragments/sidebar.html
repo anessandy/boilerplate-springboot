@@ -1,0 +1,48 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4" th:fragment="sidebar">
+    <a href="#" class="brand-link">
+        <span class="brand-text font-weight-light">DemoCrud</span>
+    </a>
+    <div class="sidebar">
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" role="menu">
+                <li class="nav-item">
+                    <a th:href="@{/logout}" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();" class="nav-link">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>Logout</p>
+                    </a>
+                    <form id="logoutForm" th:action="@{/logout}" method="post" style="display: none;"></form>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/home}" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/departemen/index}" class="nav-link">
+                        <i class="nav-icon fas fa-building"></i>
+                        <p>Departemen</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/subdepartemen/index}" class="nav-link">
+                        <i class="nav-icon fas fa-sitemap"></i>
+                        <p>Sub Departemen</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/masterkaryawan/index}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>Master Karyawan</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/filerepo/index}" class="nav-link">
+                        <i class="nav-icon fas fa-file"></i>
+                        <p>Upload File</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

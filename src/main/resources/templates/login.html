@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DemoCrud</title>
+    <link rel="stylesheet" th:href="@{/adminlte/css/adminlte.min.css}">
+    <link rel="stylesheet" th:href="@{/adminlte/plugins/fontawesome-free/css/all.min.css}">
+</head>
+
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo"><b>EDiscount</b>Monitoring</div>
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Masuk untuk memulai sesi</p>
+
+      <form th:action="@{/doLogin}" method="post">
+        <div class="input-group mb-3">
+          <input type="text" name="username" class="form-control" placeholder="Username">
+          <div class="input-group-append">
+            <div class="input-group-text"><span class="fas fa-user"></span></div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" name="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text"><span class="fas fa-lock"></span></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+          </div>
+        </div>
+      </form>
+
+      <p th:if="${param.error}" class="text-danger mt-2">Login gagal!</p>
+      <p th:if="${param.logout}" style="color:green;">Anda telah logout</p>
+    </div>
+  </div>
+</div>
+
+<script th:src="@{/adminlte/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/adminlte/js/adminlte.min.js}"></script>
+
+</body>
+</html>
+
+
+
+<!--<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head><title>Login</title></head>
+<body>
+    <h2>Login</h2>
+    <form th:action="@{/doLogin}" method="post">
+        <input type="text" name="username" placeholder="User Name" /><br/>
+        <input type="password" name="password" placeholder="Password" /><br/>
+        <button type="submit">Login</button>
+    </form>
+    <p th:if="${param.error}" style="color:red;">Login gagal</p>
+    <p th:if="${param.logout}" style="color:green;">Berhasil logout</p>
+</body>
+</html>-->

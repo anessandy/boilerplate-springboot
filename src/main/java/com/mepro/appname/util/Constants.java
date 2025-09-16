@@ -1,0 +1,48 @@
+package com.mepro.appname.util;
+
+public class Constants {
+    public static String PROPERTIES_LOCATION = "/resources/conf.properties";
+    public static String ORACLE_DATE_FORMAT = "DD-MM-YYYY";
+    public static String ORACLE_DATE_HUMAN_FORMAT = "DD Mon YYYY";
+    public static String MYSQL_DATE_FORMAT = "%d-%m-%Y";
+    public static String MYSQL_YEAR_FORMAT = "%Y";
+    public static String JAVA_TIME_HOUR_FORMAT = "HH:mm";
+    public static String MYSQL_MONTH_FORMAT = "%m";
+    public static String ORACLE_COMPLETE_DATE_FORMAT = "DD-MM-YYYY HH24:MI:SS";
+    public static String JAVA_DATE_FORMAT = "dd-MM-yyyy";
+    public static String JAVA_DATETIME_FORMAT = "dd-MM-yyyy HH:mm:ss";
+    public static String JAVA_MONTH_FORMAT = "MM";
+    public static String JAVA_FULLNAME_MONTH_FORMAT = "MMMM";
+    public static String JAVA_YEAR_FORMAT = "yyyy";
+    public static String JAVA_TIME_FORMAT_TOKEN = "HHmmsss";
+    public static String DECIMAL_FORMAT = "###,###,###";
+    public static String DEFAULT_EMPTY_STRING = "";
+    public static String DEFAULT_UNSELECT_LIST = "-1";
+    public static String DEFAULT_ENDDATE = "31-12-2100";
+    public static String DEFAULT_NUMBER_FORMAT_SEPARATOR = ",";
+    public static String DEFAULT_ZERO_NUMBER = "0";
+    public static Long DEFAULT_SIZE_FILE = 2000000L;
+    public static final Integer DEFAULT_ROW_TABLE_VIEW = 50;
+    public static final Integer DEFAULT_FIRST_TABLE_VIEW = 0;
+    public static final String HO_SMTP_HOST = "smtp.meprofarm.ho";
+    public static final String HO_SMTP_FROM = "noreply@meprofarm.ho";
+    public static final String HO_SMTP_SMTP = "smtp.meprofarm.ho";
+    public static final String HO_SMTP_USER = "noreply@meprofarm.ho";
+    public static final String HO_SMTP_PASSWORD = "mepro789";
+    public static final String HO_SMTP_AUTH = "true";
+    public static final String HO_SMTP_PORT = "587";
+    public static final String HO_SMTP_USESSL = "true";
+    public static final String PDF_EXTENSION = ".pdf";
+    public static final String XLS_EXTENSION = ".xls";
+    public static final String DEFAULT_NAMESPACES = "/modules";
+    public static final String DEFAULT_FACES_REDIRECTED = "faces-redirect=true";
+    public static final String DEFAULT_CHARSET = "text/html; charset=utf-8";
+    public static final String DEFAULT_LINK_LOGIN = "http://localhost:8080/fupb/index.do";
+    public static String DEFAULT_WILDCARD_LIKE = "%%%%";
+    public static String DEFAULT_ROWPAGETEMPLATE = "50, 100, 150";
+    public static Integer DEFAULT_DIFF_MONTH_ED = 10;
+    public static String OVERUEDATE_STATUS = "overduedate";
+    public static String SOON_STATUS = "soon";
+    public static String DEFAULT_ADMINISTRATOR = "YAA";
+    public static String DEFAULT_LENGTH_NUMBER = "%04d";
+}
